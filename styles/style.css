@@ -11,7 +11,7 @@ footer {
 .top {
     list-style-type: none;
     margin: 0px;
-    padding: 1em;
+    padding: 12px 12px 0 16px;
     font-family: arial,sans-serif;
     font-size: 14px;
     color: #222;
@@ -26,10 +26,27 @@ footer {
     text-decoration: underline;
 }
 
+.gwaffle {
+    margin: 18px 0 0 0;
+    padding: 0 16px 0 20px;
+    opacity: 55%;
+}
+
+.gaccount {
+    margin: 0;
+    padding: 10px 6px 0 0;
+    opacity: 70%;
+}
+
+.gaccount img {
+    width: 80%;
+    height: auto;
+}
+
 .bottom {
     list-style-type: none;
     margin: 0px;
-    padding: 4px 26px 0 26px;
+    padding: 4px 19px 0 19px;
     font-family: arial,sans-serif;
     font-size: 14px;
     color: #70757a;
@@ -38,6 +55,7 @@ footer {
 .bottom a {
     text-decoration: none;
     color: #70757a;
+    padding: 4px;
 }
 
 .bottom a:hover {
