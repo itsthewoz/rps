@@ -2,29 +2,33 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/style.css" />
+        <link href="styles/normalize.css" rel="stylesheet" type="text/css" media="all" >
     </head>
     <body>
         <header>
-            <ul id="graph1">
-                <li>About</li>
-                <li>Store</li>
-                <li style="float:right">Gmail</li>
-                <li style="float:right">Images</li>
-            </ul>
+            <nav>
+                <ul class="top">
+                    <li class="left">About</li>
+                    <li class="left">Store</li>
+                    <li class="left" style="float:right">Gmail</li>
+                    <li class="left" style="float:right">Images</li>
+                </ul>
+            </nav>
         </header>
-
-    <img class="google-image" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="The Google Logo">
-
+    <main class="main">
+        <div class="logo">
+            <img src="images/googlelogo.png" alt="The Google Logo" >
+        </div>
+    </main>
         <footer>
-            <p style="margin-left: -10px; margin-right: -10px">Germany</p>
-            <ul id="graph2">
-                <li>Advertising</li>
-                <li>Business</li>
-                <li>How Search Works</li>
-                <li style="float:right">Privacy</li>
-                <li style="float:right">Terms</li>
-                <li style="float:right">Settings</li>
+            <ul class="bottom">
+                <li class="left">Advertising</li>
+                <li class="left">Business</li>
+                <li class="left">How Search Works</li>
+                <li class="left" style="float:right">Privacy</li>
+                <li class="left" style="float:right">Terms</li>
+                <li class="left" style="float:right">Settings</li>
             </ul>
         </footer>
     </body>
