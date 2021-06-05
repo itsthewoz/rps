@@ -1,6 +1,6 @@
 footer {
     background-color: #f2f2f2;
-    height: 50px;
+    height: 46px;
     margin: 0;
     padding: 0;
     position: absolute;
@@ -17,13 +17,31 @@ footer {
     color: #222;
 }
 
+.top a {
+    text-decoration: none;
+    color: #222;
+}
+
+.top a:hover {
+    text-decoration: underline;
+}
+
 .bottom {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 4px 26px 0 26px;
     font-family: arial,sans-serif;
     font-size: 14px;
     color: #70757a;
+}
+
+.bottom a {
+    text-decoration: none;
+    color: #70757a;
+}
+
+.bottom a:hover {
+    text-decoration: underline;
 }
 
 .left {
@@ -43,7 +61,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 300px;
+    margin-top: 220px;
   }
 
 img {
@@ -54,7 +72,62 @@ img {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    margin-top: 20px;
+    margin-top: 8px;
     margin-bottom: 100px;
     padding: 0;
+}
+
+.searchbox {
+    height: 42px;
+    width: 600px;
+    margin: 25px;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 30px;
+    border-color: rgba(0,0,0,.15);
+    
+}
+
+.searchbox:hover {
+    box-shadow: 0px 1px 3px 2px rgba(0,0,0,.10);
+}
+
+.buttons1 {
+    background-color: #f8f9fa;
+    height: 36px;
+    width: 128px;
+    margin-right: 6px;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: #f8f9fa;
+    text-align: center;
+}
+
+.buttons2 {
+    background-color: #f8f9fa;
+    height: 36px;
+    width: 140px;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: #f8f9fa;
+    text-align: center;
+}
+
+.buttons1:hover {
+    border-color: rgba(0,0,0,.15);
+    box-shadow: 0 1px 1px 0px rgba(0,0,0,.15);
+    
+}
+
+.buttons2:hover {
+    border-color: rgba(0,0,0,.15);
+    box-shadow: 0 1px 1px 0px rgba(0,0,0,.15);
+    
 }
