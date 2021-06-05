@@ -27,9 +27,26 @@ footer {
 }
 
 .gwaffle {
-    margin: 18px 0 0 0;
-    padding: 0 16px 0 20px;
+    margin: 9px 0 0 0;
+    padding: 0 10px 0 10px;
     opacity: 55%;
+    background-color: transparent;
+}
+
+.gbutton1 {
+    height: 40px;
+    width: 40px;
+    margin-right: 0;
+    border-style: solid;
+    border-width: 0;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.gwaffle button:hover {
+    background-color: rgba(0,0,0,.10);
+    opacity: 100%;
 }
 
 .gaccount {
@@ -38,9 +55,32 @@ footer {
     opacity: 70%;
 }
 
+.gbutton2 {
+    height: 40px;
+    width: 40px;
+    margin-right: 8px;
+    margin-bottom: 4px;
+    border-style: solid;
+    border-width: 0;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.gaccount button:hover {
+    background-color: rgba(0,0,0,.10);
+    opacity: 100%;
+}
+
+.gaccount a:hover {
+    border: 1 1 1 1 rgba(0,0,0,1);
+}
+
 .gaccount img {
-    width: 80%;
+    position: relative;
+    width: 160%;
     height: auto;
+    right: 7px;
 }
 
 .bottom {
@@ -79,7 +119,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 220px;
+    margin-top: 244px;
   }
 
 img {
@@ -95,9 +135,15 @@ img {
     padding: 0;
 }
 
+#bcenter a {
+    text-decoration: none;
+    color: #222;
+}
+
 .searchbox {
-    height: 42px;
-    width: 600px;
+    z-index: 2;
+    height: 44px;
+    width: 580px;
     margin: 25px;
     background-color: transparent;
     border-style: solid;
@@ -105,6 +151,25 @@ img {
     border-radius: 30px;
     border-color: rgba(0,0,0,.15);
     
+}
+.searchbox input {
+    z-index: 3;
+    position: relative;
+    width: 500px;
+    background-color: transparent;
+    bottom: 22px;
+    left: 40px;
+    font-family: arial,sans-serif;
+    font-size: 16px;
+    border-color: transparent;
+    outline: none;
+}
+
+.searchbox img {
+    margin: 12px 0 0 14px;
+    height: 20px;
+    width: auto;
+    opacity: 50%;
 }
 
 .searchbox:hover {
