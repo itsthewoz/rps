@@ -18,9 +18,11 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
 
-    if ((playerSelection === 'paper' && computerSelection === 'rock') ||
+    if (
+       (playerSelection === 'paper' && computerSelection === 'rock') ||
        (playerSelection === 'rock' && computerSelection === 'scissors') ||
-       (playerSelection === 'scissors' && computerSelection === 'paper')) {
+       (playerSelection === 'scissors' && computerSelection === 'paper')
+    ) {
         console.log(`You win! ` + playerSelection + ` beats ` + computerSelection + `!`);
 
     } else if (playerSelection === computerSelection) {
@@ -36,10 +38,12 @@ function playGame() {
 
     let playerSelection = window.prompt('Rock Paper Scissors!')
 
-    if (playerSelection 
+    if (playerSelection)
 
-}
+};
 
 const computerSelection = computerPlay();
 let playerSelection = 'paper';
+let playerScore = 0;
+let computerScore = 0;
 console.log(playRound(playerSelection, computerSelection));
