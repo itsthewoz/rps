@@ -8,14 +8,15 @@
 // scissors beat paper
 // paper beats rock
 
-const computerSelection = computerPlay();
+
+
 
 function computerPlay() {
     let hands = ['rock', 'paper', 'scissors'];
     return hands[Math.floor(Math.random() * hands.length)];
 }
 
-function playRound(playerSelection) {
+function playRound(playerSelection, computerSelection) {
 
     if ((playerSelection === 'paper' && computerSelection === 'rock') ||
        (playerSelection === 'rock' && computerSelection === 'scissors') ||
@@ -32,5 +33,13 @@ function playRound(playerSelection) {
 }
 
 function playGame() {
-    qeq
+
+    let playerSelection = window.prompt('Rock Paper Scissors!')
+
+    if (playerSelection 
+
 }
+
+const computerSelection = computerPlay();
+let playerSelection = 'paper';
+console.log(playRound(playerSelection, computerSelection));
