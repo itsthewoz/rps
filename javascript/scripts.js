@@ -1,49 +1,57 @@
-// Create a set of rock, paper, and scissors 
-// set which beats the other
-// Input for the player for rock/paper/scissors
-// Random generated "computer" response 
-// Compare the results of the player and the computer
-// Return the winner
-// rock beats scissors
-// scissors beat paper
-// paper beats rock
-
-
-
-
 function computerPlay() {
     let hands = ['rock', 'paper', 'scissors'];
     return hands[Math.floor(Math.random() * hands.length)];
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound() {
+
+    let playerHidden = 0;
 
     if (
-       (playerSelection === 'paper' && computerSelection === 'rock') ||
-       (playerSelection === 'rock' && computerSelection === 'scissors') ||
-       (playerSelection === 'scissors' && computerSelection === 'paper')
+       (playerSelection.toLowerCase() === 'paper' && computerSelection === 'rock') ||
+       (playerSelection.toLowerCase() === 'rock' && computerSelection === 'scissors') ||
+       (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'paper')
     ) {
-        console.log(`You win! ` + playerSelection + ` beats ` + computerSelection + `!`);
+        playerHidden = 1;
 
     } else if (playerSelection === computerSelection) {
-        console.log(`It\'s a tie`);
+        playerHidden = 2;
 
     } else {
-        console.log(`You lose ` + computerSelection + ` beats ` + playerSelection + `!`);
+        playerHidden = 0;
     }   
-    return;
+    return playerHidden
 }
 
 function playGame() {
 
-    let playerSelection = window.prompt('Rock Paper Scissors!')
+let hiddenPoints = playerHidden;
 
-    if (playerSelection)
+    if (hiddenPoints === 1) {
+        playerScore++;
+        alert(`You win! ` + (playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)) + ` beats ` + 
+        (computerSelection.charAt(0).toUpperCase() +computerSelection.slice(1)) + `!`);
+            if (playerScore === 5) {
+                alert('You Win!')
+            }
 
-};
+    } else if (hiddenPoints === 0) {
+        computerScore++; 
+        alert(`You lose ` + (computerSelection.charAt(0).toUpperCase() +computerSelection.slice(1)) + ` beats ` + 
+        playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1) + `!`);
+            if (computerScore === 5) {
+                alert('You Lose!')
+            }
 
-const computerSelection = computerPlay();
-let playerSelection = 'paper';
+    } else {
+        alert(`It\'s a tie`);
+    } 
+}
+
+let playerSelection = window.prompt('Rock Paper Scissors!');
+let computerSelection = computerPlay();
 let playerScore = 0;
 let computerScore = 0;
-console.log(playRound(playerSelection, computerSelection));
+let playerHidden = playRound();
+
+console.log(playGame());
