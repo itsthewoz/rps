@@ -5,8 +5,7 @@ function computerPlay() {
 }
 
 function playRound() {
-
-let playerHidden = 0;
+let playerHidden = 0; //arbitrary number system that is used to assign game points for playGame()
 let computerSelection = computerPlay();
 let playerSelection = window.prompt('Rock Paper Scissors!');
     if (
@@ -36,7 +35,7 @@ let playerScore = 0;
 let computerScore = 0;  
 let i;
 for(i=0; i<30; i++) {
-    let hiddenPoints = playRound();
+    let hiddenPoints = playRound(); //sets a var to access playerHidden value set by playRound()
     if (hiddenPoints === 1) {
         playerScore++;
             if (playerScore === 5) {
@@ -55,10 +54,5 @@ for(i=0; i<30; i++) {
     alert(playerScore + " to " + computerScore)
   }
 }
-
-//let playerSelection = window.prompt('Rock Paper Scissors!');
-
-
-let playerHidden = playRound();
 
 console.log(playGame());
