@@ -1,12 +1,17 @@
 let playerChoice = "";
+let playerScore = 0;
+let computerScore = 0;
 
-// const results = document.querySelector(".results");
+let score = document.querySelector(".score");
+
+document.querySelector(".score").textContent =
+  "Current Score:" + " " + playerScore + " : " + computerScore;
 
 const paper = document.querySelector(".paper");
 
 paper.addEventListener("click", () => {
   playerChoice = "paper";
-  playRound();
+  playGame();
 });
 
 const rock = document.querySelector(".rock");
@@ -23,47 +28,66 @@ scissors.addEventListener("click", () => {
   playRound();
 });
 
-document.querySelector(".results").textContent = "bla";
-
 function computerPlay() {
   let hands = ["rock", "paper", "scissors"];
   return hands[Math.floor(Math.random() * hands.length)];
 }
 
 function playRound() {
-  // let playerHidden = 0; //arbitrary number system that is used to assign game points for playGame()
   let computerSelection = computerPlay();
   let playerSelection = playerChoice;
+  let pScore = 0;
   if (
     (playerSelection === "paper" && computerSelection === "rock") ||
     (playerSelection === "rock" && computerSelection === "scissors") ||
     (playerSelection === "scissors" && computerSelection === "paper")
   ) {
-    // playerHidden = 1;
-    alert(
+    playerScore++;
+    document.querySelector(".results").textContent =
       `You win! ` +
-        (playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)) +
-        ` beats ` +
-        (computerSelection.charAt(0).toUpperCase() +
-          computerSelection.slice(1)) +
-        `!`
-    );
+      (playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)) +
+      ` beats ` +
+      (computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)) +
+      `!`;
   } else if (playerSelection === computerSelection) {
-    // playerHidden = 2;
-    alert(`It\'s a tie`);
+    playerScore++;
+    computerScore++;
+    document.querySelector(".results").textContent = `It\'s a tie`;
   } else {
-    // playerHidden = 0;
-    alert(
+    computerScore++;
+    document.querySelector(".results").textContent =
       `You lose ` +
-        (computerSelection.charAt(0).toUpperCase() +
-          computerSelection.slice(1)) +
-        ` beats ` +
-        playerSelection.charAt(0).toUpperCase() +
-        playerSelection.slice(1) +
-        `!`
-    );
+      (computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)) +
+      ` beats ` +
+      playerSelection.charAt(0).toUpperCase() +
+      playerSelection.slice(1) +
+      `!`;
+  }
+  document.querySelector(".score").textContent =
+    "Current Score:" + " " + playerScore + " : " + computerScore;
+}
+
+function winner() {
+  if (playerScore === 5 && computerScore < 5) {
+    win = 1;
+    alert("You Win!");
+  } else if (playerScore < 5 && computerScore === 5) {
+    win = 1;
+    alert("You Lose!");
+  } else if (playerScore === 5 && computerScore === 5) {
+    win = 1;
+    alert("It's a tie!");
   }
 }
+
+function playGame() {
+  playRound();
+  winner();
+}
+
+// function reset() {}
+// document.querySelector(".score").textContent =
+//   `Current Score:` + " " + playerScore + " : " + computerScore;
 
 // function playRound() {
 //   let playerHidden = 0; //arbitrary number system that is used to assign game points for playGame()
